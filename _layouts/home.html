@@ -1,92 +1,28 @@
 ---
 layout: default
 ---
-{{ content }}
 
-{% if paginator %}
-    {% assign posts = paginator.posts %}
-{% else %}
-    {% assign posts = site.posts %}
+{% assign featured = site.posts | where: "featured", "true" %}
+{% if featured.size > 0 %}
+<section class="featured-section">
+    <h2 class="content-subhead">⭐ Featured Advocacy Guides</h2>
+    {% for post in featured %}
+    <div class="post-featured">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    </div>
+    {% endfor %}
+</section>
+<hr>
 {% endif %}
 
 <div class="posts">
-    <h2 class="content-subhead">Recent Posts</h2>
-
-    {%- if posts.size > 0 -%}
-        {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
-
-        {%- for post in posts -%}
-            <section class="post">
-                <header class="feed-header">
-                    <img width="48" height="48" alt="{{post.author}}'s Avatar'" class="post-avatar" src="{{ post.avatar | relative_url }}"/>
-                    <h2 class="post-title">
-                        <a href="{{ post.url | relative_url }}">
-                            {{ post.title | escape }}
-                        </a>
-                    </h2>
-                    <p class="post-meta">
-                        Posted:
-                        {{ post.date | date: date_format }}
-                        |
-                        <br class="sm-display"/>
-                        By
-                        <a class="post-author" href="{{ '/about/' | relative_url }}"</a>
-                        under
-                        <span>
-                            {% for tag in post.tags %}
-                                <a href="{{ "/tags/#" | append: tag | relative_url }}">#{{ tag }}</a>
-                            {% endfor %}
-                        </span>
-                    </p>
-                </header>
-
-                <div class="post-description">
-                    <p class="md-display">
-                        <em>{{ post.content | strip_html | escape | truncate: 400}}</em>
-                    </p>
-                    <p class="sm-display">
-                        <em>{{ post.content | strip_html | escape | truncate: 300}}</em>
-                    </p>
-                </div>
-            </section>
-        {%- endfor -%}
-    </div>
-
-
-    <br/>
-
-    {% if paginator %}
-        <div class="pure-menu pure-menu-horizontal paginate">
-            <ul>
-
-                {%- if paginator.previous_page %}
-                    <li class="pure-menu-item">
-                        <a href="{{ paginator.previous_page_path | relative_url }}">
-                            🡐
-                                                                        Previous</a>
-                    </li>
-                {%- else %}
-                    <li class="pure-menu-item">#</li>
-                {%- endif %}
-
-                <li class="pure-menu-item" id="current-page">
-                    Page
-                    {{ paginator.page }}
-                    of
-                    {{ paginator.total_pages }}
-                </li>
-
-                {%- if paginator.next_page %}
-                    <li class="pure-menu-item">
-                        <a href="{{ paginator.next_page_path | relative_url }}" class="next-page">Next
-                                                                        🡒
-                        </a>
-                    </li>
-                {%- else %}
-                    <li class="pure-menu-item">#</li>
-                {%- endif %}
-
-            </ul>
-        </div>
-    {%- endif %}
-{%- endif -%}
+    <h2 class="content-subhead">Latest Research Updates</h2>
+    {% for post in site.posts %}
+    <article class="post">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }} | By {{ site.author }}</p>
+        <p>{{ post.excerpt | strip_html | truncate: 300 }}</p>
+    </article>
+    {% endfor %}
+</div>
