@@ -8,17 +8,17 @@ description: >-
 # Navigation & URLs
 baseurl: "" 
 url: "https://tomglo10.github.io"
-repository: "tomglo10/tomglo10.github.io"
+repository: "tomglo10/AG4"
 
 # Author Credentials
 author: "Tommy T. Douglas"
 author_bio: >-
   Independent Health Researcher & Patient Advocate. Heart attack survivor (2008).
-author_pic: "/assets/profile.png" # Ensure this file is in your assets folder
+author_pic: "/assets/profile.webp" # Ensure this file is in your assets folder
 donate_link: "https://www.buymeacoffee.com/yourusername"
 
 # Theme Configuration
-remote_theme: "just-the-docs/just-the-docs"
+theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
