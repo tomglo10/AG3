@@ -95,8 +95,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 3.0"
 
   spec.metadata = {
-    "homepage_uri" => spec.homepage,
-    "source_code_uri" => spec.homepage
+   "documentation_uri" => "https://tomglo10.github.io/about",
+"changelog_uri"     => "https://github.com/tomglo10/aging-health/blob/main/docs/CHANGELOG.md"
   }
 end
 ```
