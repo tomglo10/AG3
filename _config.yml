@@ -3,40 +3,30 @@ title: "Aging Health"
 email: "your-email@domain.com"
 description: >-
   Independent health research and patient advocacy for seniors. 
-  Focusing on metabolic wellness, heart health recovery, and evidence-based insights.
+  Focusing on metabolic wellness, heart health recovery, and dementia prevention.
 
-# Navigation Settings
+# Navigation & URLs
 baseurl: "" 
 url: "https://tomglo10.github.io"
 repository: "tomglo10/tomglo10.github.io"
 
-# Author Information
+# Author Credentials
 author: "Tommy T. Douglas"
 author_bio: >-
-  Independent Health Researcher & Patient Advocate. Heart attack survivor (2008) 
-  dedicated to sharing senior wellness research freely.
-author_pic: "assets/profile.png"
+  Independent Health Researcher & Patient Advocate. Heart attack survivor (2008).
+author_pic: "/assets/profile.png" # Ensure this file is in your assets folder
+donate_link: "https://www.buymeacoffee.com/yourusername"
 
 # Theme Configuration
-# Using "remote_theme" is the most reliable way for GitHub Pages
 remote_theme: "just-the-docs/just-the-docs"
-
-# Build settings
-markdown: kramdown
-highlighter: rouge
-
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-remote-theme # This MUST be here to use Just the Docs
----
-layout: post
-title: "Understanding Metformin"
-author: "Tommy T. Douglas"
-avatar: "/assets/images/tommy.jpg"
----
-# Collections (Keeps your research organized)
+  - jekyll-remote-theme
+  - jekyll-paginate
+
+# Collections Structure
 collections:
   pages:
     output: true
@@ -44,16 +34,24 @@ collections:
   notes:
     output: true
     permalink: /notes/:title
+  journals:
+    output: true
+    permalink: /journals/:title
 
-# Default Layouts
+# Automated Layout Defaults
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      layout: "default"
-      author_profile: true
-collections:
-  notes:
-    output: true
-    permalink: /notes/:title
+      layout: "post"
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "journals"
+    values:
+      layout: "journal-entry"
