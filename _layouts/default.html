@@ -1,30 +1,21 @@
-<!doctype html>
-<html lang="en">
-
-{%- include head.html -%}
-
-<body>
-
-    <div id="layout" class="pure-g">
-
-        {%- include sidebar.html -%}
-
-        <div class="content pure-u-1 pure-u-md-3-4">
-            <div class="md-display">
-                <h1>
-                    <a class="jekyll-header" href="{{ "/" | relative_url }}">Welcome to {{site.title}}</a>
-                </h1>
-                {%- include links.html -%}
-                {%- include search.html -%}
-            </div>
-            <main id="main-content" role="main">
-                {{ content }}
-                {%- include footer.html -%}
-
-            </main>
-        </div>
+<div class="sidebar-info">
+  {% if site.author_pic %}
+    <div class="brand-photo">
+      <img src="{{ site.author_pic | relative_url }}" alt="Tommy T. Douglas" class="profile-img">
     </div>
+  {% endif %}
 
-</body>
-
-</html>
+  <div class="brand-content">
+    <h2 class="brand-title">{{ site.author }}</h2>
+    <p class="brand-tagline">{{ site.author_bio }}</p>
+  </div>
+  
+  <hr class="sidebar-divider">
+  
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="{{ '/' | relative_url }}">Research</a></li>
+      <li class="nav-item"><a href="{{ '/about/' | relative_url }}">About</a></li>
+    </ul>
+  </nav>
+</div>
