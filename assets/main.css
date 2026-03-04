@@ -1,5 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Open+Sans:wght@400;700;800&display=swap");
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+}
 
+.menu a {
+    display: flex;
+    flex-direction: column; /* Icon on top, Text on bottom */
+    align-items: center;
+    font-size: 0.9rem;
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.menu i {
+    font-size: 1.5rem; /* Larger icons for easier clicking */
+    margin-bottom: 5px;
+}
+
+.menu a:hover {
+    color: #376a8c; /* Matches your research theme color */
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
