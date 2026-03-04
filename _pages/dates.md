@@ -8,27 +8,38 @@ content-type: eg
 <style>
 .date-content a {
     text-decoration: none;
-    color: #4183c4;
+    color: #376a8c; /* Matches your clinical blue theme */
+    font-family: 'Open Sans', sans-serif;
 }
 
 .date-content a:hover {
     text-decoration: underline;
-    color: #4183c4;
+    color: #2c5570;
+}
+
+.date-content h3 {
+    font-family: 'Lora', serif;
+    color: #222;
+    margin-bottom: 15px;
 }
 </style>
 
-<main>
-    {% assign postsByDay =
-    site.posts | group_by_exp:"post", "post.date | date: '%d-%B-%Y'" %}
+<main class="date-content">
+    {% comment %} Sort all posts by date descending first {% endcomment %}
+    {% assign sortedPosts = site.posts | sort: 'date' | reverse %}
+    {% assign postsByDay = sortedPosts | group_by_exp:"post", "post.date | date: '%B %d, %Y'" %}
 
     {% for day in postsByDay %}
-      <h3 id="{{ day.name }}">{{ day.name }}</h3>
+      <h3 id="{{ day.name | slugify }}" style="border-bottom: 1px solid #eee; padding-top: 1em;">
+        <i class="far fa-calendar-check"></i> {{ day.name }}
+      </h3>
+      <ul style="padding-left: 10px;">
           {% for post in day.items %}
-            <li id="date-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{ post.url }}">{{ post.title }}</a></li>
+            <li style="padding-bottom: 0.6em; list-style: none;">
+                <a href="{{ post.url | relative_url }}" style="font-weight: 600;">{{ post.title }}</a>
+                {% if post.author %} <small style="color: #888;">— {{ post.author }}</small> {% endif %}
+            </li>
           {% endfor %}
+      </ul>
     {% endfor %}
-
-        <br/>
-        <br/>
-
 </main>
