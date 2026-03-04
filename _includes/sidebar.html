@@ -1,27 +1,36 @@
 <aside class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="sidebar-info">
-        <a href="{{ "/" | relative_url }}">
-            <span hidden>{{site.title}}
-                Header Image</span>
-            <img class="brand-photo" src="{{ site.header_image | relative_url }}" alt="Photo of {{site.author}}"/>
-        </a>
+        <div class="brand-photo-container">
+            <a href="{{ '/' | relative_url }}">
+                <img class="profile-img" src="{{ site.author_pic | relative_url }}" alt="Photo of {{ site.author }}"/>
+            </a>
+        </div>
+        
         <h1 class="brand-title">
-            <a href="{{ "/" | relative_url }}">{{site.title}}</a>
+            <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
         </h1>
-        <h2 class="brand-tagline">{{site.description}}</h2>
+        <p class="brand-tagline">{{ site.description }}</p>
 
-       <li class="nav-item">
-    <a class="pure-button" href="{{ "/categories#diabetes" | relative_url }}">Diabetes</a>
-</li>
-<li class="nav-item">
-    <a class="pure-button" href="{{ "/categories#heart-health" | relative_url }}">Heart Health</a>
-</li>
-                    <a class="pure-button" href="{{ "/notes" | relative_url }}">Notes</a>
+        <nav class="nav" aria-label="Primary">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="pure-button nav-btn" href="{{ '/' | relative_url }}">Research Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="pure-button" href="{{ "/journals" | relative_url }}">Journal</a>
+                    <a class="pure-button nav-btn" href="{{ '/notes' | relative_url }}">Research Notes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="pure-button nav-btn" href="{{ '/journals' | relative_url }}">Patient Journal</a>
                 </li>
             </ul>
         </nav>
+
+        <hr class="sidebar-divider">
+        
+        <div class="menu" aria-label="Secondary">
+            <a href="{{ site.donate_link }}" title="Support my research">
+                <i class="fas fa-coffee"></i> Support Research
+            </a>
+        </div>
     </div>
 </aside>
