@@ -30,7 +30,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-remote-theme # This MUST be here to use Just the Docs
-
+---
+layout: post
+title: "Understanding Metformin"
+author: "Tommy T. Douglas"
+avatar: "/assets/images/tommy.jpg"
+---
 # Collections (Keeps your research organized)
 collections:
   pages:
