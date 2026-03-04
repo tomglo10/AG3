@@ -1,35 +1,26 @@
 ---
 layout: post
-title: "Welcome to Jekyll!"
-date: 2020-11-01
+title: "The Mission of Aging Health: Evidence-Based Advocacy"
+date: 2026-03-04
 tags:
-  - Jekyll
-  - Markdown
-author: Andrew Smith
-avatar: assets/img/common/andrew-avatar.png
-category: Example Posts
+  - Advocacy
+  - Heart Health
+  - Metabolic Wellness
+author: Tommy T. Douglas
+avatar: assets/profile.png
+featured: true
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Welcome to **Aging Health**. 
 
-Jekyll requires blog post files to be named according to the following format:
+In 2008, I survived a major heart attack that changed the trajectory of my life. Since then, I have dedicated myself to functioning as an independent health researcher and patient advocate. 
 
-`YEAR-MONTH-DAY-title.MARKUP`
+This site is built to provide seniors and their families with transparent, evidence-based insights into:
+* **Metabolic Wellness:** Navigating Type 2 Diabetes management (Metformin, GLP-1).
+* **Cardiovascular Recovery:** Strategies for long-term heart health.
+* **Cognitive Longevity:** My ongoing 14-day guide to dementia prevention.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+### How to use this site
+You can browse my research **By Date** to see my latest findings, or use the **Tags** page to find specific topics like "Blood Pressure" or "A1C Optimization."
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]: https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+*Disclaimer: I am a researcher and advocate, not a doctor. Always consult your medical team.*
