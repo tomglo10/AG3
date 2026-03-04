@@ -1,6 +1,32 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+---
+layout: default
+---
+
+{% assign featured = site.posts | where: "featured", "true" %}
+{% if featured.size > 0 %}
+<section class="featured-section">
+    <h2 class="content-subhead">⭐ Featured Advocacy Guides</h2>
+    {% for post in featured %}
+    <div class="post-featured">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    </div>
+    {% endfor %}
+</section>
+<hr>
+{% endif %}
+
+<div class="posts">
+    <h2 class="content-subhead">Latest Research Updates</h2>
+    {% for post in site.posts %}
+    <article class="post">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }} | By {{ site.author }}</p>
+        <p>{{ post.excerpt | strip_html | truncate: 300 }}</p>
+    </article>
+    {% endfor %}
+</div>
 
 layout: home
 pagination:
