@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Sample Post: Theme Features Overview
-description: A brief example post showcasing features and content formatting.
-categories: [examples]
-tags: [jekyll, theme, example]
+title: "Research Methodology: How I Vet Clinical Data"
+description: "An overview of my process as an independent health researcher and patient advocate."
+categories: [Research]
+tags: [Advocacy, Clinical-Data, Methodology]
 ---
 
-This is a short example post to demonstrate Purelog's typography, lists, and links.
+As an independent researcher, I prioritize primary sources. When I analyze topics like **Metformin longevity** or **Dementia prevention**, my process includes:
 
-- Uses the `post` layout.
-- Appears on the home page and archives.
-- Tagged for testing search and tag pages.
+* **Peer-Reviewed Journals:** Analyzing data from PubMed and The Lancet.
+* **Clinical Trials:** Reviewing ongoing studies on GLP-1 and metabolic health.
+* **Lived Experience:** Cross-referencing clinical data with my journey as a heart attack survivor.
 
-[Read the docs](../docs/CHANGELOG.md) for details on recent changes.
+[View my Full Research Archive](/archive) for more detailed deep-dives.
