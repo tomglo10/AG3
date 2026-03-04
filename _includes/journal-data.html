@@ -1,13 +1,15 @@
-<p>
-    {%- if page.author -%}
-    {% for author in page.author %}
-    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">By: {{ author }}</span></span>
-    {%- if forloop.last == false %}, {% endif -%}
-    {% endfor %}
-    {%- endif -%}
-    <br />
+
+<p class="research-meta">
+  {%- if page.author -%}
+    <span class="author-label"><strong>Lead Researcher:</strong> {{ page.author }}</span>
+  {%- endif -%}
+  
+  <br />
+  
+  {%- if page.tags -%}
+    <span class="tags-label"><strong>Focus Areas:</strong></span>
     {%- for tag in page.tags -%}
-    <a href="{{ "/tags/#" | append: tag | relative_url }}">#{{ tag }}</a> &#8239;
+      <a href="{{ '/tags/#' | append: tag | relative_url }}" class="tag-link">#{{ tag }}</a> 
     {%- endfor -%}
+  {%- endif -%}
 </p>
