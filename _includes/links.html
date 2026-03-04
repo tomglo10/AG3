@@ -11,12 +11,17 @@
             Tags
         </a>
     </div>
-    <div class="categories">
-        <a href="{{ "/categories" | relative_url }}">
-            <i class="far fa-folder-open"></i>
-            Categories
-        </a>
-    </div>
+    <div class="heart-health">
+    <a href="{{ "/categories#heart-health" | relative_url }}">
+        <i class="fas fa-heartbeat"></i>
+        Heart Research
+    </a>
+</div><div class="heart-health">
+    <a href="{{ "/categories#brain-health" | relative_url }}">
+        <i class="fas fa-braint"></i>
+        Heart Research
+    </a>
+</div>
     <div class="archive">
         <a href="{{ "/archive" | relative_url }}">
             <i class="fas fa-archive"></i>
@@ -30,7 +35,7 @@
         </a>
     </div>
     <div class="donate">
-        <a href="{{ site.donate_link }}">
+        <a href="{{ donate_link: "https://www.buymeacoffee.com/aginghealth }}">
             <i class="fas fa-dollar-sign"></i>
             Donate
         </a>
